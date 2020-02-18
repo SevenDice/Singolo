@@ -31,7 +31,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: var(--container-padding-aside);
-  background:  #2d303a;
+  background: var(--secondary-dark);
   position: relative;
 }
 
@@ -90,6 +90,12 @@ nav li:hover {
   background: var(--container-opacity);
 }
 
+.slider {
+  background: var(--primary-light);
+  height: 600px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 
 
