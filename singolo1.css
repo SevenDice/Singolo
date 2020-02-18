@@ -97,5 +97,78 @@ nav li:hover {
   padding-bottom: 0;
 }
 
+.our-services {
+  padding: var(--container-padding);
+  background-color: var(--content-bg-color);
+  color: var(--content-text-color);
+}
 
+.our-services__title h2{
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1.1em;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+}
 
+.our-services__title p {
+  font: 300 18px/30px "lato";
+  margin-bottom: 20px;
+}
+
+.our-services__features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.feature {
+  flex-basis: 30vw;
+  display: flex;
+  margin: 15px 0;
+  flex-grow: 1;
+}
+
+.feature__icon {
+  min-width: 60px;
+  max-width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  flex-grow: 1;
+  background-image: url(/assets/img/service-icons.png);
+}
+
+.feature__title {
+  font: 900 18px/1 "lato";
+  margin-bottom: 15px;
+}
+
+.feature__text {
+  font-size: 12px;
+  line-height: 1.9em;
+}
+
+[data-icon="pencil"] {
+  background-position: -2px -2px;
+}
+
+[data-icon="bulb"] {
+  background-position: -64px -2px;
+}
+
+[data-icon="heart"] {
+  background-position: -126px -2px;
+}
+
+[data-icon="phone"] {
+  background-position: -188px -2px;
+}
+
+[data-icon="bubble"] {
+  background-position: -250px -2px;
+}
+
+[data-icon="star"] {
+  background-position: -312px -2px;
+}
