@@ -97,6 +97,25 @@ nav li:hover {
   padding-bottom: 0;
 }
 
+.slider__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+
+.left__arrow {
+
+}
+
+.arrow {
+
+}
+
+.right__arrow {
+
+}
 .our-services {
   padding: var(--container-padding);
   background-color: var(--content-bg-color);
