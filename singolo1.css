@@ -57,7 +57,7 @@ body > *::after {
 }
 
 .logo span {
-  color: var(--primary-light)
+  color: var(--primary-light);
 }
 
 nav ul {
@@ -106,16 +106,18 @@ nav li:hover {
 
 
 .left__arrow {
-
+  transform-origin: center;
 }
 
 .arrow {
-
+  padding: 40px;
+  line-height: 0;
 }
 
 .right__arrow {
-
+  transform-origin: center;
 }
+
 .our-services {
   padding: var(--container-padding);
   background-color: var(--content-bg-color);
