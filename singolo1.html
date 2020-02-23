@@ -12,32 +12,38 @@
 <body>
   <header class="header">
     <div class="wrapper">
-      <nav class="header__navigation">
-        <div class="logo">SINGOLO<span>*</span></div>
-        <ul class="navigation">
-          <li class="active-nav"><a href="/">Home</a></li>
-          <li><a href="/">Services</a></li>
-          <li><a href="/">Portfolio</a></li>
-          <li><a href="/">About</a></li>
-          <li><a href="/">Contact</a></li>
-        </ul>
+      <nav class="header__section">
+        <a class="logo" href="#">
+          <h1 class="logo__title">Singolo<span class="logo__title_colored">*</span></h1>
+        </a>
+        <div class="header__navigation">
+          <ul class="navigation__items">
+            <li class="navigation__item"><a class="navigation__link navigation__link__colored" href="#">Home</a></li>
+            <li class="navigation__item"><a class="navigation__link href="#">Services</a></li>
+            <li class="navigation__item"><a class="navigation__link href="#">Portfolio</a></li>
+            <li class="navigation__item"><a class="navigation__link href="#">About</a></li>
+            <li class="navigation__item"><a class="navigation__link href="#">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
+
   <section class="slider">
-    <div class="slider__wrapper">
-      <div class="arrow arrow__left">
-        <img src="./assets/img/arrow.png" alt="arrow-left">
-      </div>
+    <div class="wrapper">
       <div class="slide">
+        <div class="arrow arrow__left">
+          <img src="./assets/img/arrow.png" alt="arrow-left">
+        </div>
         <div class="slide__vertical-phone"></div>
         <div class="slide__horizontal-phone"></div>
+        <div class="arrow arrow__right">
+          <img src="./assets/img/arrow.png" alt="arrow-right">
       </div>
-      <div class="arrow arrow__right">
-        <img src="./assets/img/arrow.png" alt="arrow-right">
       </div>
     </div>
   </section>
+
   <section class="our-services">
     <div class="wrapper">
       <div class="our-services__title">
@@ -94,10 +100,9 @@
           </div>
         </div>
       </div>
-
-
     </div>
   </section>
+  
 </body>
 
 </html>
