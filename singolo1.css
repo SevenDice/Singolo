@@ -155,7 +155,7 @@ nav {
   box-sizing: border-box;
   background-color: var(--content-bg-color);
   color: var(--content-text-color);
-  border-bottom: 6px solid var(--content-bg-color);
+  border-bottom: 6px solid var(--menu-text-color);
   height: 500px;
 }
 
