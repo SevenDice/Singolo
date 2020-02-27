@@ -4,14 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Singolo part2</title>s
+  <link rel="stylesheet" href="singolo2.css">
+  <title>Singolo part2</title>
 </head>
 
 <body>
   <section class="portfolio">
     <div class="wrapper">
       <h2 class="portfolio__title">Portfolio</h2>
-      <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+      <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+        odio sem nec elit.</p>
 
       <div class="portfolio__filter">
         <label for="all" class="filter__active">All</label>
@@ -25,18 +27,18 @@
         <input type="radio" id="web-design" name="filter" value="web-design">
         <input type="radio" id="graphic-design" name="filter" value="graphic-design">
         <input type="radio" id="artwork" name="filter" value="artwork">
-        <img src="img/thumbnails/img1.jpg" data-filter="artwork" alt="">
-        <img src="img/thumbnails/img2.jpg" data-filter="web-design" alt="">
-        <img src="img/thumbnails/img3.jpg" data-filter="artwork" alt="">
-        <img src="img/thumbnails/img4.jpg" data-filter="artwork" alt="">
-        <img src="img/thumbnails/img5.jpg" data-filter="artwork" alt="">
-        <img src="img/thumbnails/img6.jpg" data-filter="web-design" alt="">
-        <img src="img/thumbnails/img7.jpg" data-filter="graphic-design" alt="">
-        <img src="img/thumbnails/img8.jpg" data-filter="web-design" alt="">
-        <img src="img/thumbnails/img9.jpg" data-filter="graphic-design" alt="">
-        <img src="img/thumbnails/img10.jpg" data-filter="graphic-design" alt="">
-        <img src="img/thumbnails/img11.jpg" data-filter="graphic-design" alt="">
-        <img src="img/thumbnails/img12.jpg" data-filter="web-design" alt="">
+        <img src="./assets/img/gallery/img1.jpg" data-filter="artwork" alt="">
+        <img src="./assets/img/gallery/img2.jpg" data-filter="web-design" alt="">
+        <img src="./assets/img/gallery/img3.jpg" data-filter="artwork" alt="">
+        <img src="./assets/img/gallery/img4.jpg" data-filter="artwork" alt="">
+        <img src="./assets/img/gallery/img5.jpg" data-filter="artwork" alt="">
+        <img src="./assets/img/gallery/img6.jpg" data-filter="web-design" alt="">
+        <img src="./assets/img/gallery/img7.jpg" data-filter="graphic-design" alt="">
+        <img src="./assets/img/gallery/img8.jpg" data-filter="web-design" alt="">
+        <img src="./assets/img/gallery/img9.jpg" data-filter="graphic-design" alt="">
+        <img src="./assets/img/gallery/img10.jpg" data-filter="graphic-design" alt="">
+        <img src="./assets/img/gallery/img11.jpg" data-filter="graphic-design" alt="">
+        <img src="./assets/img/gallery/img12.jpg" data-filter="web-design" alt="">
       </div>
     </div>
   </section>
@@ -44,41 +46,46 @@
   <section class="about">
     <div class="wrapper">
       <h2 class="about__title">About us</h2>
-      <p class="about__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-    </div>
-    <div class="three-column-layout">
-      <div class="person">
-        <img src="" alt="" class="person__photo">
-        <h4 class="person__name">Adam Jensen</h4>
-        <p class="person__description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-        <div class="person__socials">
-          <a href="#" title="facebook" data-social="facebook">&nbsp;</a>
-          <a href="#" title="gplus" data-social="gplus">&nbsp;</a>
-          <a href="#" title="twitter" data-social="twitter">&nbsp;</a>
-          <a href="#" title="linkedin" data-social="linkedin">&nbsp;</a>
-        </div>
+      <p class="about__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
+        commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
+        commodo, tortor mauris condimentum nibh.</p>
+      <div class="three-column-layout">
         <div class="person">
-          <img src="" alt="" class="person__photo">
-          <h4 class="person__name">Desmond Miles</h4>
-          <p class="person__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+          <img src="./assets/img/profiles/profile1.jpg" alt="" class="person__photo">
+          <h4 class="person__name">Adam Jensen</h4>
+          <p class="person__description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec
+            rutrum tellus dolor id lorem.</p>
           <div class="person__socials">
-            <a href="#" title="facebook" data-social="facebook">&nbsp;</a>
-            <a href="#" title="gplus" data-social="gplus">&nbsp;</a>
-            <a href="#" title="twitter" data-social="twitter">&nbsp;</a>
-            <a href="#" title="linkedin" data-social="linkedin">&nbsp;</a>
+            <a href="#"><img src="./assets/img/social/Facebook.png" alt="" class="person__socials__icon"></a>
+            <a href="#"><img src="./assets/img/social/Google.png" alt="" class="person__socials__icon"></a>
+            <a href="#"><img src="./assets/img/social/Twitter.png" alt="" class="person__socials__icon"></a>
+            <a href="#"><img src="./assets/img/social/LinkedIn.png" alt="" class="person__socials__icon"></a>
           </div>
           <div class="person">
-            <img src="" alt="" class="person__photo">
-            <h4 class="person__name">Scolara Visari</h4>
-            <p class="person__description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+            <img src="./assets/img/profiles/profile2.jpg" alt="" class="person__photo">
+            <h4 class="person__name">Desmond Miles</h4>
+            <p class="person__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
+              viverra lacus ut, ultrices velit.</p>
             <div class="person__socials">
-              <a href="#" title="facebook" data-social="facebook">&nbsp;</a>
-              <a href="#" title="gplus" data-social="gplus">&nbsp;</a>
-              <a href="#" title="twitter" data-social="twitter">&nbsp;</a>
-              <a href="#" title="linkedin" data-social="linkedin">&nbsp;</a>
+              <a href="#"><img src="./assets/img/social/Facebook.png" alt="" class="person__socials__icon"></a>
+              <a href="#"><img src="./assets/img/social/Google.png" alt="" class="person__socials__icon"></a>
+              <a href="#"><img src="./assets/img/social/Twitter.png" alt="" class="person__socials__icon"></a>
+              <a href="#"><img src="./assets/img/social/LinkedIn.png" alt="" class="person__socials__icon"></a>
             </div>
-      </div>
-    </div>
+            <div class="person">
+              <img src="./assets/img/profiles/profile3.jpg" alt="" class="person__photo">
+              <h4 class="person__name">Scolara Visari</h4>
+              <p class="person__description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
+                consequat felis. Quisque condimentum.</p>
+              <div class="person__socials">
+                <a href="#"><img src="./assets/img/social/Facebook.png" alt="" class="person__socials__icon"></a>
+                <a href="#"><img src="./assets/img/social/Google.png" alt="" class="person__socials__icon"></a>
+                <a href="#"><img src="./assets/img/social/Twitter.png" alt="" class="person__socials__icon"></a>
+                <a href="#"><img src="./assets/img/social/LinkedIn.png" alt="" class="person__socials__icon"></a>
+              </div>
+            </div>
+          </div>
+        </div>
   </section>
 </body>
 
