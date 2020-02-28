@@ -37,11 +37,12 @@ body {
 /* PORTFOLIO */
 
 .portfolio {
+  padding-top: 10px;
   box-sizing: border-box;
   background-color: var(--portfolio-back);
   color: var(--content-text-color);
   border-bottom: 6px solid var(--portfolio-back-bottom);
-  height: 800px;
+  height: 870px;
 }
 
 .portfolio__title {
@@ -49,30 +50,40 @@ body {
   margin: 0;
   padding-top: 50px;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 3rem;
   line-height: 1.1em;
 }
 
 .portfolio__description {
   margin-bottom: 10px;
   font-size: 1.8rem;
-  letter-spacing: -0.008rem;
+  letter-spacing: -0.0232rem;
   line-height: 30px;
 }
 
 .portfolio__filter label{
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
   border: 1px solid var(--content-text-color);
   border-radius: 5px;
   line-height: 1em;
-  padding: 4px;
+  padding: 4px 6px 3px;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin: 0;
+  margin-right: 7px;
+  letter-spacing: -0.031rem;
+  font-weight: 400;
 }
 
-.filter__active {
-  color: var(--content-bg-color);
+
+.portfolio__filter label.filter__active {
+  color: var(--menu-text-color);
+  border: 1px solid var(--menu-text-color);
+}
+
+.portfolio__filter label:hover {
+  color:var(--menu-text-color);
+  border: 1px solid var(--menu-text-color);
 }
 
 .portfolio [type=radio] {
@@ -80,26 +91,28 @@ body {
 }
 
 .portfolio__gallery {
+  padding-top: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-content: space-around;
-  align-items: center;
 }
 
 .portfolio__gallery img {
-  padding-bottom: 15px
+  margin: 0;
+  padding-bottom: 22px;
+  padding-right: 15px;
 }
 
 /* PORTFOLIO */
 
 /* ABOUT */
 .about {
+  padding-top: 10px;
   box-sizing: border-box;
   background-color: var(--content-bg-color);
   color: var(--content-text-color);
   border-bottom: 6px solid var(--menu-text-color);
-  height: 800px;
+  height: 735px;
 }
 
 .about__title {
@@ -109,41 +122,49 @@ body {
   font-weight: 900;
   font-size: 30px;
   line-height: 1.1em;
+  letter-spacing: -0.02rem;
 }
 
 .about__description {
   margin-bottom: 10px;
-  font-size: 1.8rem;
-  letter-spacing: -0.008rem;
-  line-height: 30px;
+  font-size: 1.75rem;
+  line-height: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.0359rem
 }
 
 .three-column-layout {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  
+  padding-top: 33px;
 }
 
 .person {
   margin-bottom: 15px;
   justify-content: space-between;
   max-width: 300px;
-  width: 33%;
-}
-
-.person__photo {
-
+  width: 33.3%;
 }
 
 .person__name {
-
+  margin: 0;
+  padding-top: 15px;
+  font-size: 1.75rem;
+  line-height: 1.8rem;
+  font-weight: 900;
 }
 
 .person__description {
-
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.0048rem;
+  
 }
 
-.person__socials {
-
+.person__socials img {
+  padding-top: 7px;
+  padding-right: 5px;
 }
 /* ABOUT */
