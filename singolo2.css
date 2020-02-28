@@ -87,6 +87,10 @@ body {
   align-items: center;
 }
 
+.portfolio__gallery img {
+  padding-bottom: 15px
+}
+
 /* PORTFOLIO */
 
 /* ABOUT */
@@ -117,12 +121,14 @@ body {
 .three-column-layout {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .person {
   margin-bottom: 15px;
   justify-content: space-between;
-  width: 300px;
+  max-width: 300px;
+  width: 33%;
 }
 
 .person__photo {
