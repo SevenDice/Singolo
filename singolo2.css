@@ -31,7 +31,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 /* PORTFOLIO */
@@ -61,7 +61,7 @@ body {
   line-height: 30px;
 }
 
-.portfolio__filter label{
+.portfolio__filter label {
   display: inline-block;
   font-size: 13px;
   border: 1px solid var(--content-text-color);
@@ -75,26 +75,27 @@ body {
   font-weight: 400;
 }
 
-
 .portfolio__filter label.filter__active {
   color: var(--menu-text-color);
   border: 1px solid var(--menu-text-color);
 }
 
 .portfolio__filter label:hover {
-  color:var(--menu-text-color);
+  color: var(--menu-text-color);
   border: 1px solid var(--menu-text-color);
 }
 
-.portfolio [type=radio] {
+.portfolio [type="radio"] {
   display: none;
 }
 
 .portfolio__gallery {
-  padding-top: 15px;
+  padding-top: 17px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  width: 960px;
+  overflow: hidden;
 }
 
 .portfolio__gallery img {
@@ -130,7 +131,7 @@ body {
   font-size: 1.75rem;
   line-height: 3rem;
   font-weight: 300;
-  letter-spacing: 0.0359rem
+  letter-spacing: 0.0359rem;
 }
 
 .three-column-layout {
@@ -160,7 +161,6 @@ body {
   font-size: 1.2rem;
   line-height: 2.2rem;
   letter-spacing: -0.0048rem;
-  
 }
 
 .person__socials img {
