@@ -136,14 +136,14 @@ nav {
 }
 
 .slide__vertical-phone {
-  background-image: url('./assets/img/phone-vertical.png');
+  background-image: url('../assets/img/slider/phone-vertical.png');
   width: 240px;
   height: 483px;
 }
 
 .slide__horizontal-phone {
   margin-left: 73px;
-  background-image: url('./assets/img/phone-horizontal.png');
+  background-image: url('../assets/img/slider/phone-horizontal.png');
   width: 483px;
   height: 240px;
 }
@@ -200,7 +200,7 @@ nav {
   margin-right: 20px;
   padding-top: 4px;
   flex-grow: 1;
-  background-image: url(./assets/img/service-icons.png);
+  background-image: url(../assets/img/icons/service-icons.png);
 }
 
 .feature__title {
