@@ -163,23 +163,25 @@ body {
 /* FOOTER */
 
 footer {
-  height: 76px;
   background-color: var(--secondary-dark);
+}
+
+.copyright-container {
   display: flex;
   justify-content: space-between; 
   align-items: center;
 }
 
-.copyright-container::after {
-  display: none;
-}
-
 .copyright-container__text {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 400;
   color: var(--content-text-color);
 }
 
 .person__socials {
-  line-height: 0;
+  display: flex;
+  width: 152px;
+  justify-content: space-between;
+  padding: 21px 0;
 }
 /* FOOTER */
