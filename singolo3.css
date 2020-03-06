@@ -17,7 +17,8 @@
   --portfolio-back: #2d303a;
   --portfolio-back-bottom: #323746;
 
-  --background-input: #d6564f
+  --background-input: #d6564f;
+  --input-placeholder-text: #f48c8f;
 }
 
 html {
@@ -26,7 +27,7 @@ html {
 
 .wrapper {
   max-width: 940px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 body {
@@ -72,34 +73,42 @@ body {
 
 .form-container {
   flex-basis: 66%;
-}
-
-.form-container form{
   display: flex;
   flex-direction: column;
 }
 
-.form-container input,
-.form-container textarea {
+.form-container__field {
   border: none;
   background: var(--background-input);
   border-radius: 5px;
   padding: 0 10px 0 14px;
-  color: #f48c8f;
-}
-
-.form-container input {
   font-size: 1.2rem;
-  height: 39px;
-  margin-bottom: 14px;
+  height: 38px;
+  margin-bottom: 16px;
+  color: var(--input-placeholder-text);
 }
 
-.form-container textarea {
-  height: 200px;
-  line-height: 36px;
+.form-container__field::placeholder, .form-container__textarea::placeholder {
+  font-family: 'Lato';
+  font-size: 1.21rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  color: var(--input-placeholder-text);
 }
 
-.form-container button {
+.form-container__textarea {
+  margin: 0;
+  border: none;
+  background: var(--background-input);
+  border-radius: 5px;
+  padding: 7px 10px 0 14px;
+  height: 195px;
+  line-height: 30px;
+  color: var(--input-placeholder-text);
+}
+
+.form-container__button {
+  width: 160px;
   margin: 14px 0 0;
   border: none;
   background: var(--contacts-text-color);
@@ -122,41 +131,57 @@ body {
 }
 
 .contact-information__title {
-  font-size: 1.85rem;
+  font-size: 1.8rem;
   margin: 0px 0px 6px;
+  line-height: 1.8rem;
+  font-weight: 900;
 }
 
 .contact-information__description {
-  line-height: 1.9em;
+  word-spacing: -0.015em;
+  padding-top: 4px;
+  line-height: 1.85em;
   font-size: 1.2rem;
   margin: 0;
-
+  font-weight: 400;
 }
 
 .contact-information__adresses {
   margin: 0;
   padding: 0;
-  margin-top: 10px;
+  margin-top: 22px;
   display: flex;
   flex-direction: column;
 }
 
-.contact-information__adresses p, a{
+.contact {
+  display: inline-flex;
+  align-items: center;
   margin: 0;
+  font-size: 1.2rem;
+  padding-bottom: 7px;
+}
+
+.contact:nth-child(1) {
+  padding-left: 5px;
+}
+
+.contact:nth-child(2) {
+  padding-left: 2px;
+}
+
+
+.contact-icon {
+  display: inline-block;
+}
+
+.contact__text {
+  cursor: pointer;
+  margin-left: 11px;
   text-decoration: none;
   color: var(--contacts-text-color);
-  font-size: 1.2rem;
+  font-weight: 400;
 }
-
-.contact-information__adresses p{
-  margin-top: 10px;
-}
-
-.contact-information__adresses img{
-  margin-right: 13px;
-}
-
-
 
 /* CONTACT US */
 

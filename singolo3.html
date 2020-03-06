@@ -16,32 +16,30 @@
         mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
         cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="two-column-layout">
-        <div class="form-container">
-          <form action="/" method="post">
-            <input type="text" value="Name (required)" required>
-            <input type="email" value="Email (required)" required>
-            <input type="text" value="Subject">
-            <textarea>Describe your project in detail...</textarea>
-            <button>Send</button>
-          </form>
-        </div>
+        <form class="form-container" action="/" method="post">
+          <input class="form-container__field" type="text" name="name" placeholder="Name (Required)" required>
+          <input class="form-container__field" type="email" name="email" placeholder="Email (Required)" required>
+          <input class="form-container__field" type="text" name="subject" placeholder="Subject">
+          <textarea class="form-container__textarea" name="description" placeholder="Describe your project in detail..."></textarea>
+          <button class="form-container__button" type="submit">Send</button>
+        </form>
         <div class="contact-information">
           <h3 class="contact-information__title">Contact Information</h3>
-          <p class="contact-information__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+          <p class="contact-information__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viver- ra nibh.
             Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi
-            at
-            aliquet turpis, et consequat felis.</p>
+            at aliquet turpis, et consequat felis.</p>
           <div class="contact-information__adresses">
-            <p>
-              <img src="./assets/img/icons/location.png">&nbsp;</img>Elm St. 14/05 Lost City
+            <p class="contact">
+              <img class="contact-icon" src="./assets/img/icons/location.png" alt="location-icon">
+              <span class="contact__text">Elm St. 14/05 Lost City</span>
             </p>
-            <p>
-              <img src="./assets/img/icons/phone.png">&nbsp;</img>
-              <a href="tel:03528 331 86 35">03528 331 86 35</a>
+            <p class="contact">
+              <img class="contact-icon" src="./assets/img/icons/phone.png" alt="phone-icon">
+              <a class="contact__text" href="tel:03528 331 86 35">03528 331 86 35</a>
             </p>
-            <p>
-              <img src="./assets/img/icons/mail.png">&nbsp;</img>
-              <a href="mailto:info@singolo.com">info@singolo.com</a>
+            <p class="contact">
+              <img class="contact-icon" src="./assets/img/icons/mail.png" alt="mail-icon">
+              <a class="contact__text" href="mailto:info@singolo.com">info@singolo.com</a>
             </p>
           </div>
         </div>
