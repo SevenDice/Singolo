@@ -219,6 +219,7 @@ nav {
 .feature__description {
   font-size: 12px;
   line-height: 1.9em;
+  font-weight: 300;
 }
 
 [data-icon="pencil"] {
