@@ -24,6 +24,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -36,6 +37,11 @@ body {
   padding: 0;
   font-size: 1.6rem;
   font-family: "Lato", sans-serif;
+}
+
+.ancor-link {
+  position: relative;
+  top: -95px;
 }
 
 /* HEADER */
@@ -132,10 +138,33 @@ nav {
 }
 
 .slide__images {
+  display: none;
+}
+
+.slide__images {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 .arrow {
   cursor: pointer;
   height: 100%;
@@ -158,6 +187,21 @@ nav {
   height: 240px;
 }
 
+.slide__three-phones {
+  background-image: url('../assets/img/slider/three-phones.png');
+  width: 517px;
+  height: 513px;
+}
+
+.slide-alter {
+  width: 56%;
+  height: 483px;
+} 
+
+.slide-bg__blue {
+  background-color: #648bf0;
+  border-bottom: 6px solid #348bf0;
+}
 /*END OF SLIDER */
 
 /* OUR SERVICES*/
@@ -259,7 +303,8 @@ nav {
   background-color: var(--portfolio-back);
   color: var(--content-text-color);
   border-bottom: 6px solid var(--portfolio-back-bottom);
-  height: 869px;
+  height: 100%;
+  padding-bottom: 42px;
 }
 
 .portfolio__title {
@@ -306,6 +351,14 @@ nav {
   display: none;
 }
 
+.filter-div {
+  display: none;
+}
+
+.filter-show {
+  display: flex;
+}
+
 .portfolio__gallery {
   padding-top: 17px;
   display: flex;
@@ -317,10 +370,13 @@ nav {
 
 .portfolio__gallery img {
   margin: 0;
-  padding-bottom: 22px;
-  padding-right: 15px;
+  margin-bottom: 22px;
+  margin-right: 15px;
 }
 
+.porfolio-active {
+  outline: #f06c64 solid 5px;
+}
 /* PORTFOLIO */
 
 /* ABOUT */
@@ -530,6 +586,66 @@ nav {
   text-decoration: none;
   color: var(--contacts-text-color);
   font-weight: 400;
+}
+
+#modal-hidden.hidden {
+  display: none;
+}
+
+#modal-hidden {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #0008;
+}
+
+#modal {
+  position: relative;
+  min-width: 450px;
+  max-width: 450px;
+  padding: 10px 10px;
+  background-color: var(--primary-light);
+  top: 30%;
+  left: 35%;
+  border-radius: 10px;
+  text-align: left;
+  word-break: break-all;
+}
+
+body.hide {
+  overflow: hidden;
+}
+
+.text-message {
+  max-height: 250px;
+  padding-right: 10px;
+  overflow-y: scroll;
+}
+
+.text-message::-webkit-scrollbar {
+  width: 0;
+}
+
+#modal p {
+  padding-left: 15px;
+  line-height: 30px;
+}
+
+span.modal__content {
+  font-size: 17px;
+  font-family: "Lato";
+  font-weight: 700;
+  color: var(--contacts-text-color);
+}
+
+.modal-btn {
+  width: 100px;
+  height: 30px;
+  margin-top: 40px;
+  margin-left: 40%;
 }
 
 /* CONTACT US */

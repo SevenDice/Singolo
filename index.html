@@ -29,23 +29,28 @@
   </header>
 
   <section id="slider" class="slider">
+    <a name="home" class="ancor-link"></a>
     <div class="wrapper">
       <div class="slide">
-        <div class="arrow arrow__left">
+        <div class="arrow arrow__left" onclick="plusSlides(-1)">
           <img src="./assets/img/slider/arrow.png" alt="arrow-left">
         </div>
-        <div class="slide__images">
+        <div class="slide__images fade">
           <div class="slide__vertical-phone"></div>
           <div class="slide__horizontal-phone"></div>
         </div>
-        <div class="arrow arrow__right">
+        <div class="slide__images slide-alter fade">
+          <div class="slide__three-phones"></div>
+        </div>
+        <div class="arrow arrow__right" onclick="plusSlides(1)">
           <img src="./assets/img/slider/arrow.png" alt="arrow-right">
       </div>
       </div>
     </div>
   </section>
 
-  <section id="services" class="our-services">
+  <section class="our-services">
+    <a name="services" class="ancor-link"></a>
     <div class="wrapper">
       <div class="our-services__title">
         <h2>Our Services</h2>
@@ -104,41 +109,43 @@
     </div>
   </section>
   
-  <section id="portfolio" class="portfolio">
+  <section class="portfolio" id="portfolio-section">
+    <a name="portfolio" class="ancor-link"></a>
     <div class="wrapper">
       <h2 class="portfolio__title">Portfolio</h2>
       <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
         odio sem nec elit.</p>
 
-      <div class="portfolio__filter">
-        <label for="all" class="filter__active">All</label>
-        <label for="web-design">Web Design</label>
-        <label for="graphic-design">Graphic Design</label>
-        <label for="artwork">Artwork</label>
+      <div class="portfolio__filter" id="portfolio-filter">
+        <label class="filter-btn filter__active" onclick="filterSelection('all')">All</label>
+        <label class="filter-btn" onclick="filterSelection('web-design')">Web Design</label>
+        <label class="filter-btn" onclick="filterSelection('graphic-design')">Graphic Design</label>
+        <label class="filter-btn" onclick="filterSelection('artwork')">Artwork</label>
       </div>
 
-      <div class="portfolio__gallery">
+      <div class="portfolio__gallery" id="portfolio-gallery">
         <input checked type="radio" id="all" name="filter" value="all">
         <input type="radio" id="web-design" name="filter" value="web-design">
         <input type="radio" id="graphic-design" name="filter" value="graphic-design">
         <input type="radio" id="artwork" name="filter" value="artwork">
-        <img src="./assets/img/gallery/img1.jpg" data-filter="artwork" alt="">
-        <img src="./assets/img/gallery/img2.jpg" data-filter="web-design" alt="">
-        <img src="./assets/img/gallery/img3.jpg" data-filter="artwork" alt="">
-        <img src="./assets/img/gallery/img4.jpg" data-filter="artwork" alt="">
-        <img src="./assets/img/gallery/img5.jpg" data-filter="artwork" alt="">
-        <img src="./assets/img/gallery/img6.jpg" data-filter="web-design" alt="">
-        <img src="./assets/img/gallery/img7.jpg" data-filter="graphic-design" alt="">
-        <img src="./assets/img/gallery/img8.jpg" data-filter="web-design" alt="">
-        <img src="./assets/img/gallery/img9.jpg" data-filter="graphic-design" alt="">
-        <img src="./assets/img/gallery/img10.jpg" data-filter="graphic-design" alt="">
-        <img src="./assets/img/gallery/img11.jpg" data-filter="graphic-design" alt="">
-        <img src="./assets/img/gallery/img12.jpg" data-filter="web-design" alt="">
+        <img class="filter-div artwork" src="./assets/img/gallery/img1.jpg" alt="">
+        <img class="filter-div web-design" src="./assets/img/gallery/img2.jpg" " alt="">
+        <img class="filter-div artwork" src="./assets/img/gallery/img3.jpg" alt="">
+        <img class="filter-div artwork" src="./assets/img/gallery/img4.jpg" alt="">
+        <img class="filter-div artwork" src="./assets/img/gallery/img5.jpg" alt="">
+        <img class="filter-div web-design" src="./assets/img/gallery/img6.jpg" alt="">
+        <img class="filter-div graphic-design" src="./assets/img/gallery/img7.jpg" alt="">
+        <img class="filter-div web-design" src="./assets/img/gallery/img8.jpg" " alt="">
+        <img class="filter-div graphic-design" src="./assets/img/gallery/img9.jpg" alt="">
+        <img class="filter-div graphic-design" src="./assets/img/gallery/img10.jpg" alt="">
+        <img class="filter-div graphic-design" src="./assets/img/gallery/img11.jpg" alt="">
+        <img class="filter-div web-design" src="./assets/img/gallery/img12.jpg" alt="">
       </div>
     </div>
   </section>
 
-  <section id="about" class="about">
+  <section class="about">
+    <a name="about" class="ancor-link"></a>
     <div class="wrapper">
       <h2 class="about__title">About Us</h2>
       <p class="about__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -186,19 +193,28 @@
         </div>
   </section>
 
-  <section id="contact" class="contact-form">
+  <section class="contact-form">
+    <a name="contact" class="ancor-link"></a>
     <div class="wrapper">
       <h2 class="contact-form__title">Get a Quote</h2>
       <p class="contact-form__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
         mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
         cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="two-column-layout">
-        <form class="form-container" action="/" method="post">
-          <input class="form-container__field" type="text" name="name" placeholder="Name (Required)" required>
-          <input class="form-container__field" type="email" name="email" placeholder="Email (Required)" required>
-          <input class="form-container__field" type="text" name="subject" placeholder="Subject">
-          <textarea class="form-container__textarea" name="description" placeholder="Describe your project in detail..."></textarea>
-          <button class="form-container__button" type="submit">Send</button>
+        <form id="submit-form" class="form-container">
+          <input class="form-container__field" type="text" name="name" placeholder="Name (Required)" id="contact-name" required>
+          <input class="form-container__field" type="email" name="email" placeholder="Email (Required)" id="contact-email" required>
+          <input class="form-container__field" type="text" name="subject" placeholder="Subject" id="contact-subject">
+          <textarea class="form-container__textarea" name="description" placeholder="Describe your project in detail..." id="contact-description"></textarea>
+          <button id="submit-btn" class="form-container__button">Send</button>
+          <div id="modal-hidden" class="hidden">
+            <div id="modal" class="hidden">
+                <p><span class="modal__content" id="status-form"></span></p>
+                <p><span class="modal__content" id="subject-form"></span></p>
+                <p class="text-message"><span class="modal__content" id="description-form"></span></p>
+                <button class="form-container__button modal-btn" id="close-btn">OK</button>
+            </div>
+        </div>
         </form>
         <div class="contact-information">
           <h3 class="contact-information__title">Contact Information</h3>
