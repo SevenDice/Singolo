@@ -17,6 +17,22 @@ menu.addEventListener('click', (event) => {
 
 // SLIDER
 
+// Turn off/on screen
+// document.getElementById('ButtonOfHorizontalIPhone').addEventListener('click', () => {
+//   if (document.getElementById('HorizontalIphone').getAttribute('src') == 'assets/images/HorizontalIphone.png') {
+//       document.getElementById('HorizontalIphone').setAttribute('src', 'assets/images/HorizontalIphoneOff.png');
+//   } else {
+//       document.getElementById('HorizontalIphone').setAttribute('src', 'assets/images/HorizontalIphone.png');
+//   }
+// });
+// document.getElementById('ButtonOfVerticalIPhone').addEventListener('click', () => {
+//   if (document.getElementById('VerticalIphone').getAttribute('src') == 'assets/images/VerticalIphone.png') {
+//       document.getElementById('VerticalIphone').setAttribute('src', 'assets/images/VerticalIphoneOff.png');
+//   } else {
+//       document.getElementById('VerticalIphone').setAttribute('src', 'assets/images/VerticalIphone.png');
+//   }
+// });
+
 // Change slider background
 arrowLeft.addEventListener('click', () => {
   if (slider[0].classList[1] == "slide-bg__blue") {
@@ -58,11 +74,15 @@ function showSlides(n) {
 
 
 // PORTFOLIO FILTER
-
-// Make active image in gallery
 activePortfolio.addEventListener('click', (event) => {
-  activePortfolio.querySelectorAll('img').forEach(el => el.classList.remove('porfolio-active'));
-  event.target.classList.add('porfolio-active');
+	if ((event.target.classList.contains('filter-div')) && ( !event.target.classList.contains('portfolio-active'))) {
+		activePortfolio.querySelectorAll('img').forEach(el => el.classList.remove('portfolio-active'));
+		event.target.classList.add('portfolio-active');
+	}
+	else {
+		activePortfolio.querySelectorAll('img').forEach(el => el.classList.remove('portfolio-active'));
+		event.target.classList.remove('portfolio-active');
+	}
 });
 
 // Filter
