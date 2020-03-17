@@ -1,8 +1,8 @@
 const menu = document.getElementById('menu');
 
-const arrowLeft = document.querySelector('.arrow__left')
-const arrowRight = document.querySelector('.arrow__right')
-const slider = document.getElementsByClassName("slider");
+const arrowLeft = document.querySelector('.arrow__left');
+const arrowRight = document.querySelector('.arrow__right');
+const slider = document.getElementsByClassName('slider');
 
 const btnSubmit = document.getElementById('submit-btn')
 const btnClose = document.getElementById('close-btn')
@@ -16,22 +16,34 @@ menu.addEventListener('click', (event) => {
 });
 
 // SLIDER
+//Turn off/on screen
 
-// Turn off/on screen
-// document.getElementById('ButtonOfHorizontalIPhone').addEventListener('click', () => {
-//   if (document.getElementById('HorizontalIphone').getAttribute('src') == 'assets/images/HorizontalIphone.png') {
-//       document.getElementById('HorizontalIphone').setAttribute('src', 'assets/images/HorizontalIphoneOff.png');
-//   } else {
-//       document.getElementById('HorizontalIphone').setAttribute('src', 'assets/images/HorizontalIphone.png');
-//   }
-// });
-// document.getElementById('ButtonOfVerticalIPhone').addEventListener('click', () => {
-//   if (document.getElementById('VerticalIphone').getAttribute('src') == 'assets/images/VerticalIphone.png') {
-//       document.getElementById('VerticalIphone').setAttribute('src', 'assets/images/VerticalIphoneOff.png');
-//   } else {
-//       document.getElementById('VerticalIphone').setAttribute('src', 'assets/images/VerticalIphone.png');
-//   }
-// });
+// Horizontal phone
+document.getElementById('h-phone').addEventListener('click', () => {
+  if (document.getElementById('h-phone').style.backgroundImage == 'url("./assets/img/slider/phone-horizontal.png")') {
+      document.getElementById('h-phone').style.backgroundImage = 'url("./assets/img/slider/phone-horizontal-off.png")';
+  } else {
+      document.getElementById('h-phone').style.backgroundImage = 'url("./assets/img/slider/phone-horizontal.png")';
+  }
+});
+
+// Vertical phone
+document.getElementById('v-phone').addEventListener('click', () => {
+  if (document.getElementById('v-phone').style.backgroundImage == 'url("./assets/img/slider/phone-vertical.png")') {
+      document.getElementById('v-phone').style.backgroundImage = 'url("./assets/img/slider/phone-vertical-off.png")';
+  } else {
+      document.getElementById('v-phone').style.backgroundImage = 'url("./assets/img/slider/phone-vertical.png")';
+  }
+});
+
+// Three phones
+document.getElementById('t-phones').addEventListener('click', () => {
+  if (document.getElementById('t-phones').style.backgroundImage == 'url("./assets/img/slider/three-phones.png")') {
+      document.getElementById('t-phones').style.backgroundImage = 'url("./assets/img/slider/three-phones-off.png")';
+  } else {
+      document.getElementById('t-phones').style.backgroundImage = 'url("./assets/img/slider/three-phones.png")';
+  }
+});
 
 // Change slider background
 arrowLeft.addEventListener('click', () => {

@@ -175,12 +175,14 @@ nav {
 }
 
 .slide__vertical-phone {
+  cursor: pointer;
   background-image: url('../assets/img/slider/phone-vertical.png');
   width: 240px;
   height: 483px;
 }
 
 .slide__horizontal-phone {
+  cursor: pointer;
   margin-left: 73px;
   background-image: url('../assets/img/slider/phone-horizontal.png');
   width: 483px;
@@ -188,6 +190,7 @@ nav {
 }
 
 .slide__three-phones {
+  cursor: pointer;
   background-image: url('../assets/img/slider/three-phones.png');
   width: 517px;
   height: 513px;
