@@ -175,25 +175,56 @@ nav {
 }
 
 .slide__vertical-phone {
-  cursor: pointer;
+  position: relative;
   background-image: url('../assets/img/slider/phone-vertical.png');
   width: 240px;
   height: 483px;
 }
 
-.slide__horizontal-phone {
+.vertical-phone__button {
   cursor: pointer;
+  left: 86px;
+  border-radius: 50%;
+  top: 408px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.slide__horizontal-phone {
+  position: relative;
   margin-left: 73px;
   background-image: url('../assets/img/slider/phone-horizontal.png');
   width: 483px;
   height: 240px;
 }
 
-.slide__three-phones {
+.horizontal-phone__button {
   cursor: pointer;
+  left: 9px;
+  border-radius: 50%;
+  top: 87px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.slide__three-phones {
+  position: relative;
   background-image: url('../assets/img/slider/three-phones.png');
   width: 517px;
   height: 513px;
+}
+
+.three-phones__button {
+  position: absolute;
+  cursor: pointer;
+  left: 225px;
+  border-radius: 50%;
+  top: 434px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
 }
 
 .slide-alter {

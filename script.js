@@ -19,7 +19,7 @@ menu.addEventListener('click', (event) => {
 //Turn off/on screen
 
 // Horizontal phone
-document.getElementById('h-phone').addEventListener('click', () => {
+document.getElementById('h-button').addEventListener('click', () => {
   if (document.getElementById('h-phone').style.backgroundImage == 'url("./assets/img/slider/phone-horizontal.png")') {
       document.getElementById('h-phone').style.backgroundImage = 'url("./assets/img/slider/phone-horizontal-off.png")';
   } else {
@@ -28,7 +28,7 @@ document.getElementById('h-phone').addEventListener('click', () => {
 });
 
 // Vertical phone
-document.getElementById('v-phone').addEventListener('click', () => {
+document.getElementById('v-button').addEventListener('click', () => {
   if (document.getElementById('v-phone').style.backgroundImage == 'url("./assets/img/slider/phone-vertical.png")') {
       document.getElementById('v-phone').style.backgroundImage = 'url("./assets/img/slider/phone-vertical-off.png")';
   } else {
@@ -37,7 +37,7 @@ document.getElementById('v-phone').addEventListener('click', () => {
 });
 
 // Three phones
-document.getElementById('t-phones').addEventListener('click', () => {
+document.getElementById('t-button').addEventListener('click', () => {
   if (document.getElementById('t-phones').style.backgroundImage == 'url("./assets/img/slider/three-phones.png")') {
       document.getElementById('t-phones').style.backgroundImage = 'url("./assets/img/slider/three-phones-off.png")';
   } else {
