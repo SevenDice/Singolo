@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body id="home">
+<body id="body">
   <header id="header" class="header">
     <div class="wrapper">
       <nav class="header__section">
@@ -17,19 +17,19 @@
         </a>
         <div class="header__navigation">
           <ul id="menu" class="navigation__items">
-            <li class="navigation__item"><a class="navigation__link" href="#home">Home</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#services">Services</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#portfolio">Portfolio</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#about">About</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="#contact">Contact</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#home-nav">Home</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#services-nav">Services</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#portfolio-nav">Portfolio</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#about-nav">About</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#contact-nav">Contact</a></li>
           </ul>
         </div>
       </nav>
     </div>
   </header>
 
-  <section id="slider" class="slider">
-    <a name="home" class="ancor-link"></a>
+
+  <section id="home-nav" class="slider">
     <div class="wrapper">
       <div class="slide">
         <div class="hidden-phones-off">
@@ -54,8 +54,8 @@
     </div>
   </section>
 
-  <section class="our-services">
-    <a name="services" class="ancor-link"></a>
+
+  <section id="services-nav" class="our-services">
     <div class="wrapper">
       <div class="our-services__title">
         <h2>Our Services</h2>
@@ -114,8 +114,8 @@
     </div>
   </section>
   
-  <section class="portfolio" id="portfolio-section">
-    <a name="portfolio" class="ancor-link"></a>
+  <section class="portfolio" id="portfolio-nav"">
+    <a class="ancor-link"></a>
     <div class="wrapper">
       <h2 class="portfolio__title">Portfolio</h2>
       <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
@@ -148,9 +148,8 @@
       </div>
     </div>
   </section>
-
-  <section class="about">
-    <a name="about" class="ancor-link"></a>
+  
+  <section id="about-nav" class="about">
     <div class="wrapper">
       <h2 class="about__title">About Us</h2>
       <p class="about__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -198,8 +197,7 @@
         </div>
   </section>
 
-  <section class="contact-form">
-    <a name="contact" class="ancor-link"></a>
+  <section class="contact-form" id="contact-nav">
     <div class="wrapper">
       <h2 class="contact-form__title">Get a Quote</h2>
       <p class="contact-form__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
