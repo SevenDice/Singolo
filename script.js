@@ -15,6 +15,28 @@ menu.addEventListener('click', (event) => {
   event.target.classList.add('navigation__link__colored');
 });
 
+// Scroll active navigation
+// document.addEventListener('scroll', onScroll);
+
+// function onScroll() {
+//   const curPos = window.scrollY;
+//   const divs = document.querySelectorAll('#body>section');
+//   //console.log(divs);
+//   const links = document.querySelectorAll('#menu a');
+//   console.log(links);
+
+//   divs.forEach((el) => {
+//     if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) { 
+//       links.forEach((a) => {
+//         a.classList.remove('navigation__link__colored');
+//         if(el.getAttribute('name') === a.getAttribute('href').substring(1)) {
+//           a.classList.add('navigation__link__colored');
+//         }
+//       })
+//     }
+//   });
+// }
+
 // SLIDER
 //Turn off/on screen
 
@@ -178,4 +200,5 @@ btnClose.addEventListener('click', () => {
   document.getElementsByTagName('body')[0].classList.remove('hide');
   document.getElementById('modal-hidden').classList.add('hidden');
   document.getElementById('modal').classList.add('hidden');
+  document.getElementById('submit-form').reset();
 });

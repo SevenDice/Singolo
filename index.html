@@ -32,6 +32,11 @@
     <a name="home" class="ancor-link"></a>
     <div class="wrapper">
       <div class="slide">
+        <div class="hidden-phones-off">
+          <img src="./assets/img/slider/phone-vertical-off.png" alt="">
+          <img src="./assets/img/slider/phone-horizontal-off.png" alt="">
+          <img src="./assets/img/slider/three-phones-off.png" alt="">
+        </div>
         <div class="arrow arrow__left" onclick="plusSlides(-1)">
           <img src="./assets/img/slider/arrow.png" alt="arrow-left">
         </div>
@@ -206,7 +211,7 @@
           <input class="form-container__field" type="email" name="email" placeholder="Email (Required)" id="contact-email" required>
           <input class="form-container__field" type="text" name="subject" placeholder="Subject" id="contact-subject">
           <textarea class="form-container__textarea" name="description" placeholder="Describe your project in detail..." id="contact-description"></textarea>
-          <button id="submit-btn" class="form-container__button">Send</button>
+          <button id="submit-btn" type="submit" class="form-container__button">Send</button>
           <div id="modal-hidden" class="hidden">
             <div id="modal" class="hidden">
                 <p><span class="modal__content" id="status-form"></span></p>
