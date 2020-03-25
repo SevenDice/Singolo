@@ -11,6 +11,7 @@
 <body id="body">
   <header id="header" class="header">
     <div class="wrapper">
+      <button class="hamburger-menu"></button>
       <nav class="header__section">
         <a class="logo" href="#">
           <h1 class="logo__title">Singolo<span class="logo__title_colored">*</span></h1>
@@ -30,27 +31,36 @@
 
 
   <section id="home-nav" class="slider">
-    <div class="wrapper">
+    <div class="slider__wrapper wrapper">
+      <div class="arrow arrow__left" onclick="plusSlides(-1)">
+        <img src="./assets/img/slider/arrow.png" alt="arrow-left">
+      </div>
       <div class="slide">
         <div class="hidden-phones-off">
           <img src="./assets/img/slider/phone-vertical-off.png" alt="">
           <img src="./assets/img/slider/phone-horizontal-off.png" alt="">
           <img src="./assets/img/slider/three-phones-off.png" alt="">
         </div>
-        <div class="arrow arrow__left" onclick="plusSlides(-1)">
-          <img src="./assets/img/slider/arrow.png" alt="arrow-left">
-        </div>
         <div class="slide__images fade">
-          <div class="slide__vertical-phone" id="v-phone"><div class="vertical-phone__button" id="v-button"></div></div>
-          <div class="slide__horizontal-phone" id="h-phone"><div class="horizontal-phone__button" id="h-button"></div></div>
+
+          <div class="slide__vertical-phone" id="v-phone">
+            <img src="../assets/img/slider/phone-vertical.png" alt="">
+            <div class="vertical-phone__button" id="v-button"></div>
+          </div>
+
+          <div class="slide__horizontal-phone" id="h-phone">
+            <img src="../assets/img/slider/phone-horizontal.png" alt="">
+            <div class="horizontal-phone__button" id="h-button"></div>
+          </div>
         </div>
-        <div class="slide__images slide-alter fade">
+
+        <div class="slide__images fade">
           <div class="slide__three-phones" id="t-phones"><div class="three-phones__button" id="t-button"></div></div>
         </div>
-        <div class="arrow arrow__right" onclick="plusSlides(1)">
-          <img src="./assets/img/slider/arrow.png" alt="arrow-right">
       </div>
-      </div>
+      <div class="arrow arrow__right" onclick="plusSlides(1)">
+        <img src="./assets/img/slider/arrow.png" alt="arrow-right">
+    </div>
     </div>
   </section>
 
