@@ -8,14 +8,16 @@
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body id="body">
-  <header id="header" class="header">
-    <div class="wrapper">
+<body id="body" class="body-content">
+  <header id="header" class="header header__mobile">
+    <div class="wrapper header__wrapper">
       <button class="hamburger-menu"></button>
+      <a class="logo" href="#">
+        <h1 class="logo__title">Singolo<span class="logo__title_colored">*</span></h1>
+      </a>
+
+      <div class="header__shadow"></div>
       <nav class="header__section">
-        <a class="logo" href="#">
-          <h1 class="logo__title">Singolo<span class="logo__title_colored">*</span></h1>
-        </a>
         <div class="header__navigation">
           <ul id="menu" class="navigation__items">
             <li class="navigation__item"><a class="navigation__link" href="#home-nav">Home</a></li>
@@ -29,47 +31,45 @@
     </div>
   </header>
 
-
-  <section id="home-nav" class="slider">
+  <div class="section-navigation" id="home-nav"></div>
+  <section id="home-nav" class="slider slider__bg-red">
     <div class="slider__wrapper wrapper">
+
       <div class="arrow arrow__left" onclick="plusSlides(-1)">
         <img src="./assets/img/slider/arrow.png" alt="arrow-left">
       </div>
-      <div class="slide">
-        <div class="hidden-phones-off">
-          <img src="./assets/img/slider/phone-vertical-off.png" alt="">
-          <img src="./assets/img/slider/phone-horizontal-off.png" alt="">
-          <img src="./assets/img/slider/three-phones-off.png" alt="">
-        </div>
-        <div class="slide__images fade">
 
-          <div class="slide__vertical-phone" id="v-phone">
-            <img src="../assets/img/slider/phone-vertical.png" alt="">
-            <div class="vertical-phone__button" id="v-button"></div>
+      <div class="slider__wrapper hidden"></div>
+        <div class="slide__images slide-active fade">
+          <div class="slide__vertical-phone position__left" id="v-phone">
+            <img class="vertical-phone__image" src="../assets/img/slider/phone-vertical.png" alt="">
+            <img class="vertical-phone__display" src="../assets/img/slider/phone-vertical-display.png" alt="">
+            <img class="vertical-phone__shadow" src="../assets/img/slider/phone-vertical-shadow.png" alt="">
           </div>
 
-          <div class="slide__horizontal-phone" id="h-phone">
-            <img src="../assets/img/slider/phone-horizontal.png" alt="">
-            <div class="horizontal-phone__button" id="h-button"></div>
+          <div class="slide__horizontal-phone position__right" id="h-phone">
+            <img class="horizontal-phone__image" src="../assets/img/slider/phone-horizontal.png" alt="">
+            <img class="horizontal-phone__display" src="../assets/img/slider/phone-horizontal-display.png" alt="">
+            <img class="horizontal-phone__shadow" src="../assets/img/slider/phone-horizontal-shadow.png" alt="">
           </div>
-        </div>
 
         <div class="slide__images fade">
-          <div class="slide__three-phones" id="t-phones"><div class="three-phones__button" id="t-button"></div></div>
+            <img class="slide__three-phones slide__three-phones__image" id="t-phones" src="../assets/img/slider/three-phones.png" alt="">
         </div>
       </div>
+
       <div class="arrow arrow__right" onclick="plusSlides(1)">
         <img src="./assets/img/slider/arrow.png" alt="arrow-right">
     </div>
     </div>
   </section>
 
-
-  <section id="services-nav" class="our-services">
+  <div class="section-navigation" id="services-nav"></div>
+  <section id="services-nav" class="our-services section">
     <div class="wrapper">
-      <div class="our-services__title">
-        <h2>Our Services</h2>
-        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
+      <div class="section-header">
+        <h2 class="section-header__title">Our Services</h2>
+        <p class="section-header__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
           erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
           condimentum nibh.</p>
       </div>
@@ -124,25 +124,29 @@
     </div>
   </section>
   
-  <section class="portfolio" id="portfolio-nav"">
-    <a class="ancor-link"></a>
+  <div class="section-navigation" id="portfolio-nav"></div>
+  <section class="portfolio section" id="portfolio-nav"">
     <div class="wrapper">
-      <h2 class="portfolio__title">Portfolio</h2>
-      <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
-        odio sem nec elit.</p>
+      <div class="section-header">
+        <h2 class="section-header__title">Portfolio</h2>
+        <p class="section-header__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+          odio sem nec elit.</p>
+      </div>
+
 
       <div class="portfolio__filter" id="portfolio-filter">
         <label class="filter-btn filter__active" onclick="filterSelection('all')">All</label>
         <label class="filter-btn" onclick="filterSelection('web-design')">Web Design</label>
         <label class="filter-btn" onclick="filterSelection('graphic-design')">Graphic Design</label>
         <label class="filter-btn" onclick="filterSelection('artwork')">Artwork</label>
-      </div>
 
-      <div class="portfolio__gallery" id="portfolio-gallery">
         <input checked type="radio" id="all" name="filter" value="all">
         <input type="radio" id="web-design" name="filter" value="web-design">
         <input type="radio" id="graphic-design" name="filter" value="graphic-design">
         <input type="radio" id="artwork" name="filter" value="artwork">
+      </div>
+
+      <div class="portfolio__gallery" id="portfolio-gallery">
         <img class="filter-div artwork" src="./assets/img/gallery/img1.jpg" alt="">
         <img class="filter-div web-design" src="./assets/img/gallery/img2.jpg" " alt="">
         <img class="filter-div artwork" src="./assets/img/gallery/img3.jpg" alt="">
@@ -159,12 +163,16 @@
     </div>
   </section>
   
+  <div class="section-navigation" id="about-nav"></div>
   <section id="about-nav" class="about">
     <div class="wrapper">
-      <h2 class="about__title">About Us</h2>
-      <p class="about__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
+      <div class="section-header">
+        <h2 class="section-header__title">About Us</h2>
+        <p class="section-header__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
         commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
         commodo, tortor mauris condimentum nibh.</p>
+      </div>
+      
       <div class="three-column-layout">
         <div class="person">
           <img src="./assets/img/profiles/profile1.jpg" alt="" class="person__photo">
@@ -207,12 +215,16 @@
         </div>
   </section>
 
+  <div class="section-navigation" id="contact-nav"></div>
   <section class="contact-form" id="contact-nav">
     <div class="wrapper">
-      <h2 class="contact-form__title">Get a Quote</h2>
-      <p class="contact-form__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
-        mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
-        cursus commodo, tortor mauris condimentum nibh.</p>
+      <div class="section-header section-header__light">
+        <h2 class="section-header__title">Get a Quote</h2>
+        <p class="section-header__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+          mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
+          cursus commodo, tortor mauris condimentum nibh.</p>
+      </div>
+      
       <div class="two-column-layout">
         <form id="submit-form" class="form-container">
           <input class="form-container__field" type="text" name="name" placeholder="Name (Required)" id="contact-name" required>
