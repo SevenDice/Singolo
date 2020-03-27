@@ -163,34 +163,120 @@ body {
 /* SLIDER */
 
 .slider {
+  padding-top: var(--header-height);
   box-sizing: border-box;
   background: var(--primary-light);
   border-bottom: 6px solid var(--primary-light-bottom);
-  height: 600px;
 }
 
 .slider__wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  
-}
-.slide {
-  padding-top: 53px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 80vw;
+  height: 55vw;
+  max-width: 800px;
+  max-height: 550px;
+  overflow: hidden;
   position: relative;
 }
 
 .slide__images {
-  display: none;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
 }
 
-.slide__images {
+.phone {
+  position: relative;
+}
+
+.slide-active {
+  position: absolute;
+}
+
+.arrow {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  cursor: pointer;
+ 
+}
+
+.arrow__right {
+  transform: rotate(180deg);
+}
+
+.position__left {
+
+}
+
+.position__right {
+
+}
+
+
+.slide__vertical-phone {
+  z-index: 1;
+  width: 30%;
+}
+
+.vertical-phone__image {
+  left: 0;
+  top: 0;
+  z-index: 3;
+  position: absolute;
+}
+
+.vertical-phone__display {
+  position: absolute;
+  left: 5.833333%;
+  top: 13.457557%;
+  width: 78.333333%;
+  z-index: 4;
+}
+
+.vertical-phone__shadow {
+  left: 0;
+  top: 0;
+  z-index: 1;
+  position: absolute;
+}
+
+.slide__horizontal-phone {
+  position: relative;
+  width: 90%;
+}
+
+.horizontal-phone__image {
+  position: absolute;
+
+}
+
+.horizontal-phone__display {
+  position: absolute;
+
+}
+
+.horizontal-phone__shadow {
+  position: absolute;
+
+}
+
+.slide__three-phones {
+  height: 80%;
+  display: none;
+  position: relative;
+}
+
+.slide__three-phones__image {
+
+}
+
+.slide-bg__blue {
+  background-color: #648bf0;
+  border-bottom: 6px solid #348bf0;
 }
 
 /* Fading animation */
@@ -211,81 +297,6 @@ body {
   to {opacity: 1}
 }
 
-.hidden-phones-off {
-  display: none;
-}
-
-.arrow {
-  display: flex;
-  cursor: pointer;
- 
-}
-
-.arrow__right {
-  transform: rotate(180deg);
-}
-
-.slide__vertical-phone img {
-  position: relative;
-  width: 100%;
-
-}
-
-.vertical-phone__button {
-  cursor: pointer;
-  left: 86px;
-  border-radius: 50%;
-  top: 408px;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-}
-
-.slide__horizontal-phone img {
-  
-  position: relative;
-  margin-left: 73px;
-  width: 100%;
-
-}
-
-.horizontal-phone__button {
-  cursor: pointer;
-  left: 9px;
-  border-radius: 50%;
-  top: 87px;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-}
-
-.slide__three-phones {
-  position: relative;
-  background-image: url('../assets/img/slider/three-phones.png');
-  width: 517px;
-  height: 513px;
-}
-
-.three-phones__button {
-  position: absolute;
-  cursor: pointer;
-  left: 225px;
-  border-radius: 50%;
-  top: 434px;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-}
-
-.slide-alter {
-  width: 56%;
-  height: 483px;
-} 
-
-.slide-bg__blue {
-  background-color: #648bf0;
-  border-bottom: 6px solid #348bf0;
-}
 /*END OF SLIDER */
 
 /* OUR SERVICES*/
