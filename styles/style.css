@@ -3,6 +3,10 @@
 /* CONSTANTS */
 
 :root {
+  --header-height: 79px;
+  --header-height-mobile: 59px;
+  --min-width: 320px;
+
   --menu-text-color: #fff;
 
   --primary-light: #f06c64;
@@ -22,27 +26,36 @@
   --input-placeholder-text: #f48c8f;
 }
 
+* {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
 html {
   font-size: 10px;
   scroll-behavior: smooth;
 }
 
 .wrapper {
-  max-width: 940px;
+  max-width: 1020px;
   margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  min-width: var(--min-width);
   font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
 }
-
 
 /* HEADER */
 
-header {
+.header {
   top: 0;
   position: fixed;
   border-bottom: 6px solid var(--secondary-dark-bottom);
@@ -50,20 +63,23 @@ header {
   width: 100%;
   z-index: 2;
   box-sizing: border-box;
-}
-
-.header__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  height: var(--header-height);
+  min-width: 320px;
 }
 
 .header-mobile {
-  height: 60px;
+  height: var(--header-height-mobile);
+}
+
+.header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .hamburger-menu {
-  
+  display: none;
   background-image: url("../assets/img/icons/Burger-menu-icon.png");
   cursor: pointer;
   width: 25px;
@@ -73,6 +89,7 @@ header {
   border: none;
   outline: none;
   z-index: 2;
+  position: relative;
 }
 
 .hamburger-menu__active
@@ -80,15 +97,9 @@ header {
   transform: rotate(90deg);
 }
 
-nav {
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  padding-top: 7px;
-  width: 100%;
-}
-
 .logo {
+  position: relative;
+  top: 2px;
   text-decoration: none;
 }
 
@@ -109,12 +120,13 @@ nav {
 }
 
 .navigation__items {
+  padding: 0;
   display: flex;
-  width: 371px;
-  justify-content: space-between;
 }
 
 .navigation__item {
+  margin-left: 32.5px;
+  position: relative;
   list-style: none;
   text-transform: uppercase;
   letter-spacing: -0.02rem;
@@ -123,14 +135,16 @@ nav {
 }
 
 .navigation__item:not(:first-child)::before {
+  left: -17px;
+  position: absolute;
   content: "\2219";
   display: inline-block;
   width: 1.5em;
-  line-height: 1px;
   color: #494e62;
 }
 
 .navigation__link {
+  display: block;
   color: var(--menu-text-color);
   text-decoration: none;
 }
