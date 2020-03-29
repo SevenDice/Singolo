@@ -171,7 +171,6 @@ body {
 
 .slider__wrapper {
   display: flex;
-  align-items: center;
   width: 80vw;
   height: 55vw;
   max-width: 800px;
@@ -188,90 +187,127 @@ body {
   justify-content: space-around;
   align-items: center;
   z-index: 1;
+  opacity: 0;
+  user-select: none;
+}
+
+.phone {
+  position: relative;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+}
+
+.slide-active {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  opacity: 1;
 }
 
 .phone {
   position: relative;
 }
 
-.slide-active {
-  position: absolute;
-}
-
 .arrow {
   display: flex;
   cursor: pointer;
- 
 }
 
 .arrow__right {
   transform: rotate(180deg);
 }
 
-.position__left {
-
-}
-
-.position__right {
-
-}
-
-
 .slide__vertical-phone {
-  z-index: 1;
+  z-index: 2;
   width: 30%;
+  height: 87.818182%;
 }
 
 .vertical-phone__image {
   left: 0;
   top: 0;
-  z-index: 3;
+  z-index: 2;
   position: absolute;
 }
 
-.vertical-phone__display {
+.vertical-phone__image .horizontal-phone__image {
   position: absolute;
-  left: 5.833333%;
-  top: 13.457557%;
-  width: 78.333333%;
-  z-index: 4;
+  z-index: 2;
+  left: 0;
+  top: 0;
 }
 
-.vertical-phone__shadow {
+.vertical-phone__shadow .horizontal-phone__shadow {
   left: 0;
   top: 0;
   z-index: 1;
   position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
-.slide__horizontal-phone {
-  position: relative;
+.vertical-phone__shadow {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 87%;
+}
+
+.vertical-phone__display .horizontal-phone__display{
+  position: absolute;
+  z-index: 4;
+}
+
+.vertical-phone__display {
+  position: absolute;
+  z-index: 3;
+}
+.slide__vertical-phone .vertical-phone__display  {
+  left: 5.833333%;
+  top: 11.457557%;
+  width: 78.333333%;
+}
+
+.slide__horizontal-phone .horizontal-phone__display {
+  left: 12.422360%;
+  top: 5.833333%;
+  width: 68.944099%;
+  position: absolute;
+}
+
+.slide__vertical-phone .vertical-phone__image {
   width: 90%;
 }
 
-.horizontal-phone__image {
+.slide__horizontal-phone .horizontal-phone__image {
   position: absolute;
-
+  width: 94.824017%;
 }
 
-.horizontal-phone__display {
-  position: absolute;
-
+.slider {
+  position: relative;
+  z-index: 0;
 }
 
-.horizontal-phone__shadow {
-  position: absolute;
-
+.slider .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 53px;
+  padding-bottom: 58px;
 }
+
 
 .slide__three-phones {
-  height: 80%;
+  
   display: none;
   position: relative;
 }
 
 .slide__three-phones__image {
-
+  height: 80%;
 }
 
 .slide-bg__blue {
