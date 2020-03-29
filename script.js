@@ -15,17 +15,23 @@ const headerLogo = document.getElementById("head_logo");
 
 // Mobile menu
 mobileMenu.addEventListener('click',() => {
-  if (headerMenu.classList.contains('navigation__items-mobile')){
-    headerMenu.classList.remove('navigation__items-mobile');
+  if (headerMenu.classList.contains('header__menu__open')){
+    headerMenu.classList.remove('header__menu__open');
     mobileMenu.classList.add('menu_open_accordion');
     headerLogo.classList.add('menu_open_logo');
   }
   else{
-    headerMenu.classList.add('navigation__items-mobile');
+    headerMenu.classList.add('header__menu__open');
     mobileMenu.classList.remove('menu_open_accordion');
     headerLogo.classList.remove('menu_open_logo');
   }
 });
+
+headerMenu.addEventListener('click',() => {
+  if (headerMenu.classList.contains('header__menu__open')===false){
+    headerMenu.classList.add('header__menu__open');
+  }});
+
 
 // Navbar active navigation
 menu.addEventListener('click', (event) => {
