@@ -122,6 +122,7 @@ nav {
   background: var(--primary-light);
   border-bottom: 6px solid var(--primary-light-bottom);
   height: 600px;
+  overflow: hidden;
 }
 
 .slide {
