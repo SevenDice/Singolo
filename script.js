@@ -9,6 +9,24 @@ const btnClose = document.getElementById('close-btn')
 
 const activePortfolio = document.getElementById('portfolio-gallery');
 
+const mobileMenu = document.getElementById("head_accord");
+const headerMenu = document.getElementById("head_menu_cont");
+const headerLogo = document.getElementById("head_logo");
+
+// Mobile menu
+mobileMenu.addEventListener('click',() => {
+  if (headerMenu.classList.contains('navigation__items-mobile')){
+    headerMenu.classList.remove('navigation__items-mobile');
+    mobileMenu.classList.add('menu_open_accordion');
+    headerLogo.classList.add('menu_open_logo');
+  }
+  else{
+    headerMenu.classList.add('navigation__items-mobile');
+    mobileMenu.classList.remove('menu_open_accordion');
+    headerLogo.classList.remove('menu_open_logo');
+  }
+});
+
 // Navbar active navigation
 menu.addEventListener('click', (event) => {
   menu.querySelectorAll('a').forEach(el => el.classList.remove('navigation__link__colored'));

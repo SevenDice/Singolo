@@ -10,13 +10,17 @@
 
 <body id="body">
   <header id="header" class="header">
-    <div class="wrapper">
-      <nav class="header__section">
-        <a class="logo" href="#">
+    <div class="wrapper header_container">
+      <div id="head_accord" class="header_accordion">
+        <div class="center_line"></div>
+      </div>
+      <nav id="head_menu_cont" class="header__section">
+        
+        <a id="head_logo" class="logo" href="#">
           <h1 class="logo__title">Singolo<span class="logo__title_colored">*</span></h1>
         </a>
-        <div class="header__navigation">
-          <ul id="menu" class="navigation__items">
+        <div class="header__navigation header__navigation-mobile">
+          <ul id="menu" class="navigation__items navigation__items-mobile">
             <li class="navigation__item"><a class="navigation__link" href="#home-nav">Home</a></li>
             <li class="navigation__item"><a class="navigation__link" href="#services-nav">Services</a></li>
             <li class="navigation__item"><a class="navigation__link" href="#portfolio-nav">Portfolio</a></li>
@@ -126,13 +130,13 @@
         <label class="filter-btn" onclick="filterSelection('web-design')">Web Design</label>
         <label class="filter-btn" onclick="filterSelection('graphic-design')">Graphic Design</label>
         <label class="filter-btn" onclick="filterSelection('artwork')">Artwork</label>
-      </div>
-
-      <div class="portfolio__gallery" id="portfolio-gallery">
         <input checked type="radio" id="all" name="filter" value="all">
         <input type="radio" id="web-design" name="filter" value="web-design">
         <input type="radio" id="graphic-design" name="filter" value="graphic-design">
         <input type="radio" id="artwork" name="filter" value="artwork">
+      </div>
+
+      <div class="portfolio__gallery" id="portfolio-gallery">
         <img class="filter-div artwork" src="./assets/img/gallery/img1.jpg" alt="">
         <img class="filter-div web-design" src="./assets/img/gallery/img2.jpg" " alt="">
         <img class="filter-div artwork" src="./assets/img/gallery/img3.jpg" alt="">
