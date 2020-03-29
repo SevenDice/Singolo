@@ -34,26 +34,57 @@
 
   <section id="home-nav" class="slider">
     <div class="wrapper">
-      <div class="slide">
-        <div class="hidden-phones-off">
-          <img src="./assets/img/slider/phone-vertical-off.png" alt="">
-          <img src="./assets/img/slider/phone-horizontal-off.png" alt="">
-          <img src="./assets/img/slider/three-phones-off.png" alt="">
+      <div id="slider"  class="slider_container">
+        <div class="prev_img">
+          <div class="arrow-left" onclick="minusSlide()">
+              <img src="assets/img/arrow-left.png" alt="prev-image">
+          </div>
         </div>
-        <div class="arrow arrow__left" onclick="plusSlides(-1)">
-          <img src="./assets/img/slider/arrow.png" alt="arrow-left">
+        <div id="slide1" class="slide">
+          <div class="first_img1">
+            <div  class="tel11">
+              <img class="phone11" src="assets/img/vertical.png" alt="vertical-image">
+              <img id="pdisplay1" class="phone11_display" src="assets/img/phone-vertical-display-slide1.png" alt="vertical-image">
+              <div id="iphone_button1" class="slide1_button1"></div>
+            </div>  
+          </div>
+          <div class="second_img1">
+            <div class="tel21">
+              <img class="phone21" src="assets/img/horizontal.png" alt="horizontal-image">
+              <img id="pdisplay2" class="phone21_display" src="assets/img/phone-horizontal-display-slide1.png" alt="horizontal-image">
+              <div id="iphone_button2" class="slide1_button2"></div>
+            </div>    
+          </div>
+         </div>
+         <div id="slide2" class="slide slide_none">
+          <div class="first_img2">
+            <div class="tel12">
+              <img class="phone12" src="assets/img/phone-vertical-smal.png" alt="vertical-image">
+              <img id="pdisplay3" class="phone12_display" src="assets/img/phone-vertical-small-display.png" alt="vertical-image">
+              <div id="iphone_button3" class="slide2_button1"></div>
+            </div>  
+          </div>
+          <div class="second_img2">
+            <div class="tel22">
+              <img class="phone22" src="assets/img/phone-vertical-big.png" alt="vertical-image">
+              <img id="pdisplay4" class="phone22_display" src="assets/img/phone-vertical-big-display.png" alt="vertical-image">
+              <div id="iphone_button4" class="slide2_button2"></div>
+            </div>    
+          </div>
+          <div class="third_img2">
+            <div class="tel32">
+              <img class="phone32" src="assets/img/phone-vertical-smal.png" alt="vertical-image">
+              <img id="pdisplay5" class="phone32_display" src="assets/img/phone-vertical-small-display.png" alt="vertical-image">
+              <div id="iphone_button5" class="slide2_button3"></div>
+            </div>    
+          </div>
+         </div>
+        <div class="next_img">
+          <div class="arrow-right" onclick="plusSlide()">
+            <img src="assets/img/arrow-right.png" alt="next-image">
+          </div>
         </div>
-        <div class="slide__images fade">
-          <div class="slide__vertical-phone" id="v-phone"><div class="vertical-phone__button" id="v-button"></div></div>
-          <div class="slide__horizontal-phone" id="h-phone"><div class="horizontal-phone__button" id="h-button"></div></div>
-        </div>
-        <div class="slide__images slide-alter fade">
-          <div class="slide__three-phones" id="t-phones"><div class="three-phones__button" id="t-button"></div></div>
-        </div>
-        <div class="arrow arrow__right" onclick="plusSlides(1)">
-          <img src="./assets/img/slider/arrow.png" alt="arrow-right">
-      </div>
-      </div>
+			</div>
     </div>
   </section>
 

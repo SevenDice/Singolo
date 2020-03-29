@@ -13,6 +13,9 @@ const mobileMenu = document.getElementById("head_accord");
 const headerMenu = document.getElementById("head_menu_cont");
 const headerLogo = document.getElementById("head_logo");
 
+const SLIDER_BACK = document.getElementById("home-nav");
+const SLIDES = document.getElementsByClassName("slide");
+
 // Mobile menu
 mobileMenu.addEventListener('click',() => {
   if (headerMenu.classList.contains('header__menu__open')){
@@ -60,73 +63,91 @@ function onScroll() {
 }
 
 // SLIDER
-//Turn off/on screen
+var slideIndex = 1; //устанавливает текущий слайд 1
 
-// Horizontal phone
-document.getElementById('h-button').addEventListener('click', () => {
-  if (document.getElementById('h-phone').style.backgroundImage == 'url("./assets/img/slider/phone-horizontal.png")') {
-      document.getElementById('h-phone').style.backgroundImage = 'url("./assets/img/slider/phone-horizontal-off.png")';
-  } else {
-      document.getElementById('h-phone').style.backgroundImage = 'url("./assets/img/slider/phone-horizontal.png")';
-  }
-});
-
-// Vertical phone
-document.getElementById('v-button').addEventListener('click', () => {
-  if (document.getElementById('v-phone').style.backgroundImage == 'url("./assets/img/slider/phone-vertical.png")') {
-      document.getElementById('v-phone').style.backgroundImage = 'url("./assets/img/slider/phone-vertical-off.png")';
-  } else {
-      document.getElementById('v-phone').style.backgroundImage = 'url("./assets/img/slider/phone-vertical.png")';
-  }
-});
-
-// Three phones
-document.getElementById('t-button').addEventListener('click', () => {
-  if (document.getElementById('t-phones').style.backgroundImage == 'url("./assets/img/slider/three-phones.png")') {
-      document.getElementById('t-phones').style.backgroundImage = 'url("./assets/img/slider/three-phones-off.png")';
-  } else {
-      document.getElementById('t-phones').style.backgroundImage = 'url("./assets/img/slider/three-phones.png")';
-  }
-});
-
-// Change slider background
-arrowLeft.addEventListener('click', () => {
-  if (slider[0].classList[1] == "slide-bg__blue") {
-    slider[0].classList.remove('slide-bg__blue');
-  }
-  else { slider[0].classList.add('slide-bg__blue'); }
-});
-
-arrowRight.addEventListener('click', () => {
-  if (slider[0].classList[1] == "slide-bg__blue") {
-    slider[0].classList.remove('slide-bg__blue');
-  }
-  else { slider[0].classList.add('slide-bg__blue'); }
-});
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlide() {
+	showSlides(slideIndex += 1,'right');
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function minusSlide() {
+  showSlides(slideIndex -= 1,'left');  
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide__images");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+//Показ слайдов
+function showSlides(n, direction) {
+  var i;
+  if (n > SLIDES.length) {
+		slideIndex = 1;
   }
-  slides[slideIndex - 1].style.display = "flex";
+  if (n < 1) {
+      slideIndex = SLIDES.length;
+  }
+	document.getElementById('slide1').classList.remove('slide_right');
+	document.getElementById('slide1').classList.remove('slide_left');
+	document.getElementById('slide2').classList.remove('slide_right');
+	document.getElementById('slide2').classList.remove('slide_left');
+
+	if (direction=='right'){
+	  document.getElementById('slide1').classList.add('slide_right');
+		document.getElementById('slide2').classList.add('slide_right');
+
+	}
+	else if (direction=='left'){
+		document.getElementById('slide1').classList.add('slide_left');
+		document.getElementById('slide2').classList.add('slide_left');
+	}			
+	for (i = 0; i < SLIDES.length; i++) {	
+		SLIDES[i].style.display = "none";	
+	}
+		SLIDES[slideIndex - 1].style.display = "flex";
+	
+	if (slideIndex%2==0){SLIDER_BACK.classList.add('slide_blue');}
+	else {SLIDER_BACK.classList.remove('slide_blue');}
 }
+
+//Нажатие кнопок телефона в слайдере
+  document.getElementById('iphone_button1').addEventListener('click', () => {
+	  if (document.getElementById('pdisplay1').classList.contains('invisible')==false){
+			document.getElementById('pdisplay1').classList.add('invisible');
+		}
+		else{
+			document.getElementById('pdisplay1').classList.remove('invisible');
+		}
+	});	
+  document.getElementById('iphone_button2').addEventListener('click', () => {
+	  if (document.getElementById('pdisplay2').classList.contains('invisible')==false){
+			document.getElementById('pdisplay2').classList.add('invisible');
+		}
+		else{
+			document.getElementById('pdisplay2').classList.remove('invisible');
+		}
+  });
+  document.getElementById('iphone_button3').addEventListener('click', () => {
+	  if (document.getElementById('pdisplay3').classList.contains('invisible')==false){
+			document.getElementById('pdisplay3').classList.add('invisible');
+		}
+		else{
+			document.getElementById('pdisplay3').classList.remove('invisible');
+		}
+	});  
+  document.getElementById('iphone_button4').addEventListener('click', () => {
+	  if (document.getElementById('pdisplay4').classList.contains('invisible')==false){
+			document.getElementById('pdisplay4').classList.add('invisible');
+		}
+		else{
+			document.getElementById('pdisplay4').classList.remove('invisible');
+		}
+  });
+  document.getElementById('iphone_button5').addEventListener('click', () => {
+	  if (document.getElementById('pdisplay5').classList.contains('invisible')==false){
+			document.getElementById('pdisplay5').classList.add('invisible');
+		}
+		else{
+			document.getElementById('pdisplay5').classList.remove('invisible');
+		}
+	});  
+
+
 
 
 // PORTFOLIO FILTER
